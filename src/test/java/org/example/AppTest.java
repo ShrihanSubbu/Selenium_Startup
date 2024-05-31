@@ -16,9 +16,8 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        WebDriver driver;
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://bonigarcia.dev/webdrivermanager/");
         System.out.println("Page Title : " + driver.getTitle());
         assertTrue(driver.getTitle().contains("WebDriver"));
