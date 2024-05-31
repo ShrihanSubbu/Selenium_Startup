@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 /**
@@ -16,8 +17,13 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\uSER\\Desktop\\SeleniumSample\\src\\test\\java\\drivers\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
+
+        /*WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();*/
         driver.get("https://bonigarcia.dev/webdrivermanager/");
         System.out.println("Page Title : " + driver.getTitle());
         assertTrue(driver.getTitle().contains("WebDriver"));
