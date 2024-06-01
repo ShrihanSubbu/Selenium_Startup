@@ -19,6 +19,7 @@ public class AppTest {
     public void shouldAnswerWithTrue() {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\uSER\\Desktop\\SeleniumSample\\src\\test\\java\\drivers\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
+        options.setBinary("C:\\Users\\uSER\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
         //options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 
