@@ -26,6 +26,21 @@ public class ReverseEachWordOfAString {
         System.out.println("-------------------------");
     }
 
+    static void revrseWordsinAString(String word){
+        String[] wordArray = word.split(" ");
+        String reverseWords= "";
+        StringBuilder sb = new StringBuilder();
+        for (int i=wordArray.length-1;i>=0;i--) {
+            reverseWords =wordArray[i];
+            if(reverseWords.isBlank())
+                continue;
+            sb.append(reverseWords);
+            if(i!=0)
+                sb.append(" ");
+        }
+        System.out.println(sb.toString());
+    }
+
     public static void main(String[] args) {
         reverseEachWordOfString("Java Concept Of The Day");
 
@@ -34,6 +49,7 @@ public class ReverseEachWordOfAString {
         reverseEachWordOfString("I am string not reversed");
 
         reverseEachWordOfString("Reverse Me");
-    }
 
+        revrseWordsinAString("Java Concept Of The Day");
+    }
 }
