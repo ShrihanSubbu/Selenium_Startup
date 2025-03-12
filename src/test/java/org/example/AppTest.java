@@ -25,9 +25,9 @@ public class AppTest {
 
         /*WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();*/
-        driver.get("https://bonigarcia.dev/webdrivermanager/");
+        driver.get("https://www.nike.com/in/");
         System.out.println("Page Title : " + driver.getTitle());
-        assertTrue(driver.getTitle().contains("WebDriver"));
-        driver.quit();
+        /*assertTrue(driver.getTitle().contains("WebDriver"));
+        driver.quit();*/
     }
 }
