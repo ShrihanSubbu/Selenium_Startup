@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <listeners>
+    <!--<listeners>
         <listener class-name="reports.ExtentReportListener"></listener>
     </listeners>
     <parameter name="browser" value="chrome"></parameter>
-    <parameter name="baseUrl" value="https://www.nike.com/in/"></parameter>
+    <parameter name="baseUrl" value="https://www.nike.com/in/"></parameter>-->
     <test verbose="2" preserve-order="true" name="PracticeTest" parallel="methods" thread-count="1">
         <classes>
-            <class name="org.example.NikeTest">
+            <!--<class name="org.example.NikeTest">-->
+            <class name="api.APITest">
             </class>
         </classes>
     </test>
